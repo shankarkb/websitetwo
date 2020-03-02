@@ -101,7 +101,7 @@
       border-radius: 15px;
       margin-top:15px;
     }
-    #navbar::before{ content:""; display:table; clear:both;}
+    
     .menu{       
         z-index: 150;
         border: solid green;
@@ -261,6 +261,7 @@
         margin-top:15px;
       
     }
+    #navbar::before{ content:""; display:table; clear:both;}
     .menu{       
         z-index: 150;
         border: solid green;
