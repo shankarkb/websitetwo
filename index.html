@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Layout #4 - Responsive Tutorial</title>
+        <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+        <link rel="stylesheet" type="text/css" href="public/css/style7.css">
+        
+        
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="header"></div>
+            <div id="navbar">
+                <div class="menu">
+                    <div class="menuitemsmx"><i class="ion-close-round"></i></div>
+                    <div class="menuitem">Home</div>
+                    <div class="menuitem">Contact</div>
+                    <div class="menuitem">About</div>
+                    <div class="menuitem">Services</div>
+                    <div class="menuitemsm"><i class="ion-navicon-round"></i></div>
+                </div>
+            </div>
+            <div id="content">
+                
+                <div id="right-section">
+                    <p class="small">LYoWAT - ff fi fl ffl</p>
+                    <p class="big">LYoWAT - ff fi fl ffl</p>
+                    
+                    .small { font: 19.9px "Constantia", "Times New Roman", "Georgia", "Palatino", serif; }
+                    .big   { font: 20px "Constantia", "Times New Roman", "Georgia", "Palatino", serif; }
+
+                </div>
+            </div>
+            <div id="footer"></div>
+        </div>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            var opn=0;
+            
+            //alert('welcome');
+            /*
+
+            if(jQuery(window).width()<=991)
+            {
+                if(opn==1){
+                  $(".menuitem").css("display","block");
+                  
+                  $(".menuitemsm").css("display","none");
+                  $("#navbar").css("height","280px");
+                  $(".menuitemsmx").css("display","block");
+                  //alert(jQuery(window).width());
+                  }else{
+                  //$(".menuitem").css("display","none");
+                  $(".menuitemsm").css("display","block");
+                  //$(".menuitemsmx").css("display","none");
+                  //alert(jQuery(window).width());
+                  }
+            }else{
+                $(".menuitemsm").css("display","none");
+            }
+            */
+            $(document).ready(function(){
+                
+                $(".menuitemsm").click(function(){
+                // 
+                //$(this).css("display","block");
+                
+                $(".menuitem").css("display","block");
+                $(".menuitemsm").css("display","none");
+                $(".menuitemsmx").css("display","block");
+                $("#navbar").css("height","280px");
+                opn=1;
+                //alert(jQuery(window).width());
+                //alert('welcome');
+                });
+
+                $(".menuitemsmx").click(function(){
+                // 
+                $(this).css("display","none");
+                
+                $(".menuitem").css("display","none");
+                $(".menuitemsm").css("display","block");
+                $(".menuitemsmx").css("display","none");
+                $("#navbar").css("height","100px");
+                opn=0;
+                //alert(jQuery(window).width());
+                //alert('welcome');
+                });
+
+              
+            });
+            var screenwidth=jQuery(window).width();
+            
+            
+              $( window ).resize(function() {
+                  /*
+                 // alert('welcome');
+               // alert(jQuery(window).width());
+               screenwidth=jQuery(window).width();
+                if(jQuery(window).width()>=992)
+              {
+                  //alert("900px");
+                  $("#navbar").css("height","100px");
+                  $(".menuitem").css("display","inline-block");
+                  $(".menuitemsm").css("display","none");
+                  $(".menuitemsmx").css("display","none");
+                  
+              }
+             */
+              if(jQuery(window).width()<768)
+              {
+                  //alert("900px");
+                  
+                  if(opn==1){
+                     // alert("inline");
+                    $(".menuitem").css("display","block");
+                    $(".menuitemsm").css("display","none");
+                    $("#navbar").css("height","280px");
+                    $(".menuitemsmx").css("display","block");
+                  }else{
+                      //alert('meniiii');
+                    $(".menuitem").css("display","none");
+                    $(".menuitemsm").css("display","inline-block");
+                    $("#navbar").css("height","100px");
+                    $(".menuitemsmx").css("display","none");
+                 }
+                  //alert(jQuery(window).width());
+              }else{
+                  //alert('pexil');
+                  $(".menuitem").css("display","inline-block");
+                  $(".menuitemsm").css("display","none");
+                  $(".menuitemsmx").css("display","none");
+                  $("#navbar").css("height","100px");
+                  //alert(jQuery(window).width());
+              }
+              
+
+              });
+
+            
+            
+            
+            
+            </script>
+</html>
